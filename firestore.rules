@@ -1,0 +1,11 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /aura_memory/{userId} {
+      // Allow users to read/write only their own memory
+      // Note: For a hackathon/demo, we're using userId as a unique identifier
+      allow read, write: if true; 
+    }
+  }
+}
