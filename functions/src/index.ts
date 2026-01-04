@@ -32,7 +32,7 @@ app.use(cors({ origin: true }));
 app.use(express.json({ limit: '10mb' }));
 
 // Hardcoded API key for hackathon
-const GEMINI_API_KEY = 'AIzaSyDkEuTjnW08gAnzXVV2O149AuVOxyjxj2I';
+const GEMINI_API_KEY = ["Enter API Key"];
 
 // Initialize services
 const geminiService = new GeminiService(GEMINI_API_KEY);
